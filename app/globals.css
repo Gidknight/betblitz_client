@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+:root {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 14px;
+} */
+
+.my-gradient {
+  @apply bg-gradient-to-r from-primary via-purple-500 to-pink-500;
+}
+
+.wrapper {
+  @apply w-full h-full px-1 md:px-20 pt-24 pb-36 md:pt-5 flex flex-col gap-5 items-start justify-start md:justify-between bg-neutral;
+}
+
+.wrapper-2 {
+  @apply overflow-x-hidden w-full h-full px-5 lg:px-20 py-20 md:py-5 flex flex-col md:flex-row gap-0 lg:gap-5 items-center md:items-start justify-start md:justify-between bg-neutral;
+}
+.header-text {
+  @apply text-lg md:text-4xl font-bold text-center capitalize;
+}
+.sub-header-text {
+  @apply text-base font-semibold text-center capitalize;
+}
+
+.my-text-gradient {
+  @apply bg-gradient-to-r from-[#07FFFC] via-pink-500 to-pink-500 inline-block text-transparent bg-clip-text;
+}
+
+.animated-btn {
+  @apply my-gradient background-animate capitalize px-6 py-2.5 rounded-md text-lg font-semibold hover:scale-105 transition-all duration-300;
+}
+
+.background-animate {
+  background-size: 400%;
+
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+}
+
+@keyframes AnimationName {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
